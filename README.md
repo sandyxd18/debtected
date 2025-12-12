@@ -16,7 +16,6 @@ debtected/
 ├── backend/
 │   ├── api.py
 │   ├── Dockerfile
-│   ├── knn_pipeline-1.pkl
 │   └── requirements.txt
 ├── base_model/
 │   ├── knn/
