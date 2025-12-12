@@ -1,0 +1,28 @@
+name: debtected
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    networks:
+      - appnet
+
+  frontend:
+    build: ./frontend/app
+    container_name: frontend
+    env_file:
+      - ./frontend/app/.env
+    ports:
+      - "5173:80"
+    networks:
+      - appnet
+    depends_on:
+      - backend
+
+networks:
+  appnet:
+    driver: bridge

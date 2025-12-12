@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
+
+* {
+  font-family: 'Cascadia Code', monospace;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  overflow-y: auto; /* jika form lebih besar dari layar, scroll hanya pada container */
+  padding-top: 40px; /* agar shadow header terlihat */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+}
+
+.form-box {
+  width: 900px; /* lebih lebar agar muat 4 kolom */
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #252526;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-width: 100%;      /* tidak boleh lebih dari layar */
+  overflow: hidden;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 15px;
+}
+
+@media (max-width: 1000px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.form-button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #007acc;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #005a9e;
+}
+
+.result {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.result.rendah {
+  color: #007acc;
+}
+
+.result.sedang {
+  color: #dcdcaa;
+}
+
+.result.tinggi {
+  color: #f44747;
+}
+
+.loading {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.spinner {
+  margin: 20px auto 0;
+  border: 4px solid #3c3c3c;
+  border-top: 4px solid #007acc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900; 
+  font-size: 22px;
+  padding: 0;
+  margin-left: 10px;
+  color: #d4d4d4;
+}

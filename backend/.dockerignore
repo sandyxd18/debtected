@@ -1,0 +1,4 @@
+RUN.md
+.dockerignore
+Dockerfile
+.env
