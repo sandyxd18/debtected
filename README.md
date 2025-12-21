@@ -9,36 +9,6 @@ Debtected is a full-stack machine learning application that uses the K-Nearest N
 - **Frontend**: ReactJS interface for user interaction
 - **ML Model**: KNN classifier trained on debt payment data
 
-## 📂 Project Structure
-
-```
-debtected/
-├── backend/
-│   ├── api.py
-│   ├── Dockerfile
-│   └── requirements.txt
-├── base_model/
-│   ├── knn/
-│   │   ├── knn.py
-│   │   └── train.py
-│   └── README.md
-├── model/
-│   ├── dataset.csv
-│   ├── knn_utang_generate_pkl.py
-│   ├── knn_utang.ipynb
-│   ├── knn_utang_test&train.py
-│   └── requirements.txt
-├── frontend/
-│   └── app/
-│       ├── src/
-│       ├── public/
-│       ├── Dockerfile
-│       ├── package.json
-│       └── vite.config.js
-├── docker-compose.yml
-└── README.md
-```
-
 ## 🛠️ Tech Stack
 
 ### Machine Learning
